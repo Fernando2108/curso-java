@@ -1,0 +1,15 @@
+public class Coche {
+
+    short birthyear = 1970; // Inicializacion = Declaracion + Asignacion
+        int n.asientos = 5
+        String color = rojo 
+        int n.puertas
+        long countriPopulation = 40_000_000
+        float heyght = 1.78f;
+        double weight = 65.74;
+        boolean hasPet = true;
+        char type = 'A';
+        String name = "Pepe";
+    
+    }
+}
