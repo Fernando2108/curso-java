@@ -14,13 +14,16 @@ public class funciones {
     
         static int subtraction (int num1,int num2){
             int result = num1 - num2;
+            return 
             // return num1 - num2;
         }
 
     public static void main(String`[] args)
-     // Los argumentos son los valores que llegarán alos parmetros
-      int fistResult = add(num:2,num2:4)
-      add(num1:345,fistResult);
+     // Los argumentos son los valores que llegarán a los parmetros
+      int fistResult = add (:2,:4)
+       add(num1:345,fistResult);
+
+      int resultSubtraction = subtraction(num1:23, num2:4);
 
     }  
 }
