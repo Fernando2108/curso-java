@@ -1,18 +1,26 @@
-package demos.03-aut;
+// Formas de imprimir en pantalla
+
+public class Out {
 
 public static void main(String[] args) {
 
-         String name = "Pepe"
-         Sttring surname = "Perez";
+         String name = "Pepe";
+         String surname = "Perez";
          int age = 33;
 
-         // println - expresion
-         Sistem.out.println("hola "+ name +" " surname + "\n ¿como estas a tus %i años" + age +" años" ) ?"
+         // println - expresión
+         System.out.println("hola "+ name +" " surname + "\n ¿como estas a tus %i años" + age +" años" ) ?" + age + " años");
 
-         Sistem.out.printf(format:"hola %s\s ¿como estas a tus %s años?", name, surname, );
+            // printf -> expresión, variables...
+
+         System.out.printf("hola %s %s \n¿como estas a tus %s años?", name, surname, age);
 
          // println - template string
 
-         Sy
-    
+         System.out.println("""
+                 Hola %s %s
+                 ¿Cómo estás a tus %s años?
+                     """.formatted(name, surname, age));
+    }
+
 }
