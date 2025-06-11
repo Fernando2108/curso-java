@@ -1,6 +1,8 @@
-public class Coche {
+public class Car2 {
 
-    short birthyear = 1970; // Inicializacion = Declaracion + Asignacion
+    static int numCars = 0;
+
+        short birthyear = 1970; // Inicializacion = Declaracion + Asignacion
         int n.asientos = 5
         String color = rojo 
         int n.puertas
