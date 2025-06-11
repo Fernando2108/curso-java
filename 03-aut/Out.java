@@ -9,11 +9,11 @@ public static void main(String[] args) {
          int age = 33;
 
          // println - expresión
-         System.out.println("hola "+ name +" " surname + "\n ¿como estas a tus %i años" + age +" años" ) ?" + age + " años");
+         System.out.println("hola " + name + " " + surname + "\n ¿como estas a tus años" + age +" años" );
 
-            // printf -> expresión, variables...
+         // printf -> expresión, variables...
 
-         System.out.printf("hola %s %s \n¿como estas a tus %s años?", name, surname, age);
+         System.out.printf("hola %s %s\n¿como estas a tus %s años?", name, surname, age);
 
          // println - template string
 

@@ -1,6 +1,9 @@
-package 02.02-person;
+public class Ejercicio {
 
- // Tipos de numeros
+    
+
+
+    // Tipos de números
     // byte - 1bytes -128 - 127
     // short 2bytes
     // int - 4bytes
@@ -10,9 +13,9 @@ package 02.02-person;
 
 public class Ejercicio-Person {
    
-        byte age; // Declaracion
-        age = 22; // Asignacion
-        short birthyear = 1990; // Inicializacion = Declaracion + Asignacion + Asignacion
+        byte age; // Declaración
+        age = 22; // Asignación
+        short birthyear = 1990; // Inicializaron = Declaración + Asignación + Asignación
         int cityPopulation = 4_000_000;
         long countryPopulation = 40_000_000;
         float height = 1.78f;
@@ -27,12 +30,12 @@ public class Ejercicio-Person {
         System.out.println("Población de mi ciudad: " + cityPopulation);
         System.out.println("Población de mi país: " + countryPopulation);
         System.out.printf("""
-                Altura: %.2f m
-                Peso: %.2f kg
-                ¿Tiene mascotas? %b
-                Tipo: %c
+                Altura: %s mts
+                Peso: %s kg
+                ¿Tiene mascotas? %s
+                Tipo: %s
                 Nombre: %s
-                """, height, weight, hasPet, type, name);
+                """.formatted (height, weight, hasPet, type, name));
 
 
     
