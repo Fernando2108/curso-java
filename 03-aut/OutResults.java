@@ -12,17 +12,19 @@ public class OutResults {
             // println -> expresion
             String result = "hola " + name + " " + surname + "\n¿como estas a tus " + age +" años?";
             System.out.println(result);
+
             // prinlf -> expresion, variables...
-            result ="hola %s %s\n¿como estas a tus %s años?"
-            System.out.printlf
+            result ="hola %s %s\n¿como estas a tus %s años?\ñ";
             System.out.printf(result, name, surname, age);
 
             // println - template string
 
-            System.out.println("""
-                    Hola %
-                    """;);
-        
+            result ="""
+              Hola %s %s
+              ¿como estás a tus %s años?      
+                """;
+        System.out.println(result.formatted( name, surname, age));
+
     }
 
 }
