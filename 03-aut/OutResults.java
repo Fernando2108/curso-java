@@ -1,5 +1,5 @@
 // Formas de imprimir en pantalla dia 4
-// guardandolo previamente en una variable
+// guardándolo previamente en una variable
 
 public class OutResults {
 
@@ -9,12 +9,12 @@ public class OutResults {
             String surname = "Perez";
             int age = 33;
 
-            // println -> expresion
+            // println -> expresión
             String result = "hola " + name + " " + surname + "\n¿como estas a tus " + age +" años?";
             System.out.println(result);
 
-            // prinlf -> expresion, variables...
-            result ="hola %s %s\n¿como estas a tus %s años?\ñ";
+            // println -> expresión, variables...
+            result = "hola %s %s\n¿como estas a tus %s años?\ñ";
             System.out.printf(result, name, surname, age);
 
             // println - template string

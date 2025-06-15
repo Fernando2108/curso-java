@@ -1,4 +1,4 @@
-// Formas de imprimir en pantalla
+   // Formas de imprimir en pantalla
 
 public class Out {
 
