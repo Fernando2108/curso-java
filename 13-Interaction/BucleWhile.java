@@ -3,7 +3,7 @@ import java.util.Random;
 public class BucleWhile {
 
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
          boolean sentinel = true;  
         
         while (sentinel) {
@@ -24,7 +24,7 @@ public class BucleWhile {
     static void forSample() {
 
         for (int i = 0; i <= 0; i++){
-            Random randomCreator new random();
+            Random randomCreator = new random();
             int number = randomCreator.nextInt(9);
 
             if (number % 2 == 0) {
