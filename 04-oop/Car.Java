@@ -1,7 +1,7 @@
 public class Car {
     string brand;
     char type;
-     int numSeats;
+    int numSeats;
     int numDors;
     String color;
     boolean isAuto;
@@ -16,7 +16,7 @@ public class Car {
     ) {
         this.brand = brand; 
         this.type = type; 
-        this.numSeats =  numSeats; 
+        this.numSeats = numSeats; 
         this.numDors = numDors; 
         this.color = color; 
         this.isAuto = isAuto;
@@ -41,6 +41,4 @@ public class Car {
             color, 
             isAuto));
         }
-}
-
 }
