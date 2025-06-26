@@ -1,6 +1,6 @@
 package base;
 
-public class Cat extends Pet {
+public class Cat extends ICat {
 
     public Cat(String name, int age) {
         super(name, age);

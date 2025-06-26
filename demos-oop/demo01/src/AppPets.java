@@ -1,12 +1,10 @@
-import base.Dog;
-import base.Person;
-import base.Pet;
-import base.Square;
-import game.Character;
-import game.Role;
-import game.Species;
+import animals.Cat;
+import animals.Dog;
+import animals.Duck;
+import animals.Pet;
+import animals.RubberDuck;
 
-public class App {
+public class AppPets {
 
     static void playWithPersons() {
         Person person1 = new Person("Pepe", 22);
