@@ -14,7 +14,7 @@ public class OutResults {
             System.out.println(result);
 
             // println -> expresión, variables...
-            result = "hola %s %s\n¿como estas a tus %s años?\ñ";
+            result = "hola %s %s\n¿como estas a tus %s años?\n";
             System.out.printf(result, name, surname, age);
 
             // println - template string
