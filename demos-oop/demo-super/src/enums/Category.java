@@ -1,14 +1,10 @@
 package enums;
 
-public enum ContainerType {
-
-    // BAG, BOX
-
-    BAG("bolsa"), BOX("caja");
+public enum Category {
+    FOOD("Alimentación"), DRUGSTORE("Droguería"), HYGIENE("Higiene"), PETS("Mascotas");
 
     String name;
-    
-    ContainerType(String name) {
+    Category(String name) {
         this.name = name;
     }
 
