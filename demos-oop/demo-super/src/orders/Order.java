@@ -14,9 +14,16 @@ public class Order implements IOrder {
 
     @Override
     public IContainer addProduct(IProduct product) {
-        // TODO Auto-generated method stub
-        return null;
+
+      for (IContainer container : containers){  
+        if (container.canInsert(product)) {
+        //container. getProducts().add(product);
+        product.putInto(container);
+        return container;
+        }
     }
+    return null;
+ }
 
     @Override
     public Set<IContainers> getContainers() {
