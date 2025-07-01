@@ -1,3 +1,5 @@
+package local.concept1;
+
 public class Factorial {
 
     static long calculateFactorial(long number) {
