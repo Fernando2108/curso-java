@@ -10,7 +10,7 @@ public class CalcView extends Calc {
     void menu() {
         String menu = """
 
-        Elige el numero de la opcion que quieras
+        Elige el numero de la opción que quieras
         -----------------------------------------
          1. Dime un numero (%s)
          2. Dime otro numero (%s)
