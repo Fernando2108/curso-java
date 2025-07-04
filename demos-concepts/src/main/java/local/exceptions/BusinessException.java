@@ -1,29 +1,22 @@
 package local.exceptions;
 
+// Checked Exception
+
 public class BusinessException extends Exception {
 
+    private static String generateMessage(ErrorCodes code, String message) {
+        return code + " - " + message;
+    }
+    
     ErrorCodes code;
 
-    BusinessException(ErrorCodes code,String mensage) {
-       super(); 
-    }
-        
-
-    BusinessException(ErrorCodes code,String mensage Throwable cause) {
-        super(message, cause);
+    public BusinessException(ErrorCodes code, String message) {
+        super(generateMessage(code, message));
         this.code = code;
     }
-        
 
-    private String generateMessage(ErrorCodes code, ) {
-       getMessage();
-       code;
-}
-
-
-
-enum ErrorCodes {
-    ERROR_EVEN("No se admiten números pares"),
-    ERROR_NEGATIVE("No se admiten números negativos");
-    ERROR_ZERO("No se puede dividir por cero")
+    public BusinessException(ErrorCodes code, String message, Throwable cause) {
+        super(generateMessage(code, message), cause);
+        this.code = code;
+    }
 }
