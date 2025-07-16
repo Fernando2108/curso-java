@@ -1,20 +1,25 @@
 public class Palindrome {
 
-    static booLean isPalindrome(String text) {
-        String initialText text.toLowerCase();
-        String noSpacesText = ManageString.removeSpaces(initialText);
-        String reverseText = manageStrings.reverseString(noSpacestext);
-        return noSpaces
+    static boolean isPalindrome(String text) {
+        String initialText = text.toLowerCase();
+        String noSpacesText = ManageStrings.removeSpaces(initialText);
+        String reverseText = ManageStrings.reverseString(noSpacesText);
+        return noSpacesText.equals(reverseText);
+    }
+
+    static void showPalindromeInfo(String text) {
+        String message = isPalindrome(text)
+                ? " es palíndromo"
+                : " NO es palíndromo";
+        message = "\"" + text + "\"" + message;
+        System.out.println(message);
+
     }
 
     public static void main(String[] args) {
-        String textGood = "Atar ala rata";
-        String textBad  = "Atar al ratón"; 
+        String textGood = "Atar a la rata";
+        String textBad = "Atar al ratón";
         showPalindromeInfo(textGood);
-        showPalindromeInfo(textBad);         
-
-        String messge1 = isPalindrome(textBad) ? " espalindromo" : "NO es palindromo";
-        messge1 =  "\"" 
+        showPalindromeInfo(textBad);
     }
-    
 }

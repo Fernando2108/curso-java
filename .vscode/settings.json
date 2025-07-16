@@ -3,8 +3,19 @@
     "java.project.sourcePaths": [
         "demos-oop/demo-super/src",
         "demos-oop/demo-super",
+        "14-mas-iteraction",
+        "13-Interaction",
+        "12-interation",
+        "11-random",
+        "10-operators.java",
+        "09-conditions",
+        "08-operatros",
+        "05-funciones",
+        "04-oop",
         "03-aut",
+        "02-person",
         "01-hola-mundo",
-        "02-person"
-    ]
+        "15-Fibonacci"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }

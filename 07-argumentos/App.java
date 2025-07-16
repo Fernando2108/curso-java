@@ -1,17 +1,18 @@
+
 public class App {
 
-
     public static void main(String[] args) {
-  
-      int[] nambers = {1, 2, 3};
-      System.out.println(numbers.length);
-      System.out.println(numbers[0]);
-      System.out.println(args.length);
 
+        int num1 = Integer.valueOf(args[0]);
+        int num2 = Integer.valueOf(args[1]);
 
+        System.out.println(num1);
+        System.out.println(num2);
 
+        int result = Calculator.multiply(num1, num2);
+        Calculator.showResult("multiplicación", result);
+
+        
     }
-    
-      
     
 }

@@ -2,78 +2,91 @@ package local.concept1;
 
 import java.util.Scanner;
 
+import local.exceptions.BusinessException;
+import local.exceptions.ErrorCodes;
+
 public class Calculator {
 
     private int num1;
     private int num2;
 
-   public void setNum1(String[] args) {
-    
-   }
-
-    public int getNum1() {
-        return num1;
+    public void setNum1(String message) {
+        this.num1 = getInteger(message);
     }
 
-    public void setNum1(int num1) {
-        this.num1 = num1;
+    public void setNum2(String message) {
+        this.num2 = getInteger(message);
     }
 
-    int add(){
+    int add() {
         int result = num1 + num2;
-          return result;
+        return result;
     }
-    
-    int subtract () {
+
+    int subtract() {
         int result = num1 - num2;
         return result;
     }
-    
-    int multiply () {
+
+    int multiply() {
         int result = num1 * num2;
         return result;
     }
-    
-    int intDivide () {
-        int result = num1 / num2;
-        return result;
-    }
 
-    int restDivision () {
+    int intDivide() throws BusinessException {
+        try {
+            int result = num1 / num2;
+            return result;
+            
+        } catch (ArithmeticException e) {
+            throw new BusinessException(
+                ErrorCodes.ERROR_ZERO,
+                "Dividiendo por 0",
+                e);
+            } 
+        }
+
+    int restDivision() {
         int result = num1 % num2;
         return result;
     }
 
-    void showResult(String operation,int result) {
+    void showResult(String operation, int result) {
         System.out.printf("El resultado de la %s es %s", operation, result);
         System.out.println("");
     }
 
-    void showAllResults() {
-System.out.printf("Operaciones con %s y %s\n", num1, num2);
-        calc.showResult("suma", calc.add(num1, num2));
-        calc.showResult("resta", calc.subtract(num1,num2));
-        calc.showResult("producto", calc.multiply(num1, num2));
-        calc.showResult("división", calc.intDivide(num1, num2));
-        calc.showResult("resto", calc.restDivision(num1, num2));
-
+    void showAllResults() throws BusinessException {
+        System.out.printf("Operaciones con %s y %s\n", num1, num2);
+        showResult("suma", add());
+        showResult("resta", subtract());
+        showResult("producto", multiply());
+        showResult("división", intDivide());
+        showResult("resto", restDivision());
     }
 
-    int getInteger (String message) {
+    private int getInteger(String message) {
+
+        @SuppressWarnings("resource")
         Scanner scanner = new Scanner(System.in);
         System.out.println(message);
         int num = scanner.nextInt();
-        // scanner.close();
+
         return num;
     }
-    
+
     public static void main(String[] args) {
         Calculator calc = new Calculator();
+        // Bucle while para repetir con distintos pares de números
+        calc.setNum1("Dime un número entero");
+        calc.setNum2("Dime otro número entero");
 
-
-        calc.getInteger("Dime un número entero");
-        calc.getInteger("Dime otro número entero");
-        // Los argumentos son los valores que llegarán a los parámetros
-        
+        try {
+            calc.showAllResults();
+        } catch (BusinessException e) {
+            System.err.println(e.getMessage());
+            System.err.println(e.getCause());
+        }
     }
+
 }

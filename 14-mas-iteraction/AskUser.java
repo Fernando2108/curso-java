@@ -45,6 +45,4 @@ public class AskUser {
        //ask();
        ask2();
     }
-
-    
 }
