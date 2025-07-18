@@ -2,16 +2,15 @@ package com.cdsb.serial;
 
 import java.time.LocalDate;
 
-
-public class JacksonCyclist2 {
+public class JacksonCyclistDI {
 
     Cyclist cyclist;
     String pathCyclistJson = "demos-persis/resources/cyclist.json";
     String pathBikesJson = "demos-persis/resources/bikes.json";
-    //JsonTools jsonTools;
+    JsonTools jsonTools;
 
-    public JacksonCyclist2() {
-        // this.jsonTools = jsonTools;
+    public JacksonCyclistDI(JsonTools jsonTools) {
+        this.jsonTools = jsonTools;
         cyclist = new Cyclist("Pepe", LocalDate.of(2000, 10, 23));
         addBikes();
         System.out.println(cyclist);
@@ -19,7 +18,7 @@ public class JacksonCyclist2 {
 
     private void addBikes() {
         Bicycle[] bikes;
-        bikes = Jsons.fromJsonFile(pathBikesJson, Bicycle[].class);
+        bikes = jsonTools.fromJsonFile(pathBikesJson, Bicycle[].class);
         for (int i = 0; i < bikes.length; i++) {
             cyclist.addBike(bikes[i]);
         }
@@ -27,14 +26,13 @@ public class JacksonCyclist2 {
 
     public void saveCyclist() {
         System.out.println("Saving cyclist...");
-        Jsons.toJsonFile(cyclist, pathCyclistJson);
-        Cyclist savedCyclist = Jsons.fromJsonFile(pathCyclistJson, Cyclist.class);
+        jsonTools.toJsonFile(cyclist, pathCyclistJson);
+        Cyclist savedCyclist = jsonTools.fromJsonFile(pathCyclistJson, Cyclist.class);
         System.out.println("Saved Cyclist: " + savedCyclist);
     }
 
     public static void main(String[] args) {
-        JacksonCyclist2 jCyclist = new JacksonCyclist2();
+        JacksonCyclistDI jCyclist = new JacksonCyclistDI(new JsonTools());
         jCyclist.saveCyclist();
     }
 
-}

@@ -17,5 +17,6 @@
         "01-hola-mundo",
         "15-Fibonacci"
     ],
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

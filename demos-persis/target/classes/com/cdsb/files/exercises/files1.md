@@ -7,3 +7,5 @@ Pregúntale al usuario:
 - Apellido2
 
 - Guárdalo en un fichero txt
+
+-Muéstrale al usuario lo que has guardado

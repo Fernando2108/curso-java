@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.cdsb.files.FileSystem2;
+import com.cdsb.files.MessagesFS;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -52,11 +52,11 @@ public class JacksonBike {
 
 
     public String save(String data) {
-        return FileSystem2.writeFile(pathName, data);
+        return MessagesFS.writeFile(pathName, data);
     }
 
     public String read() {
-        return FileSystem2.readFileToString(pathName);
+        return MessagesFS.readFileToString(pathName);
     }
 
     public static void main(String[] args) {
