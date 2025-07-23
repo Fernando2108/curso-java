@@ -1,15 +1,13 @@
 package local.repositories;
 
 import java.util.List;
-import java.util.wOptional;
+import java.util.Optional;
 
-public class RepoDAO<E> {
-
+public interface DAO<E> {
     List<E> findAll();
-    <ID> Optional<E> findByid(ID ID);
+    <ID> Optional<E> findById(ID id);
     E save(E entity);
     void update(E entity);
     void delete(E entity);
-    //<ID> void delete(ID id)
-
+    // <ID> void delete(ID id);
 }

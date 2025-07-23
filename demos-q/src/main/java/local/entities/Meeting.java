@@ -12,16 +12,15 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="meetings")
 public class Meeting {
-    @Column(name="meetings")
-    @Id()
+    @Column(name = "meeting_id")
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String description;
-
     private LocalDateTime date;
 
-    public Meeting(){
+    public Meeting() {
         // JPA default constructor
     }
 
@@ -32,7 +31,15 @@ public class Meeting {
 
     @Override
     public String toString() {
-        return "Meeting [id=" + id * ", description=" + description + ", date= + date"]";
+        return "Meeting [id=" + id + ", description=" + description + ", date=" + date + "]";
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 
 }
