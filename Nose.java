@@ -1,10 +1,13 @@
-package local;
+public class Nose {
+
+    
+
 
 /**
  * Hello world!
  */
-public final class App {
-    private App() {
+public final class Nose {
+    private Nose() {
     }
 
     /**
@@ -14,4 +17,5 @@ public final class App {
     public static void main(String[] args) {
         System.out.println("Hello World!");
     }
+}
 }

@@ -1,6 +1,11 @@
 package local.repositories;
-impor local.entities
 
-public class PersonDAO {
+import local.entities.Person;
+
+public class PersonDAO extends AbstractDAO<Person> {
+
+    public PersonDAO() {
+        super(Person.class);
+    }
 
 }

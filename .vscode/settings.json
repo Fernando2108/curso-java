@@ -3,6 +3,7 @@
     "java.project.sourcePaths": [
         "demos-oop/demo-super/src",
         "demos-oop/demo-super",
+        "15-Fibonacci",
         "14-mas-iteraction",
         "13-Interaction",
         "12-interation",
@@ -15,7 +16,7 @@
         "03-aut",
         "02-person",
         "01-hola-mundo",
-        "15-Fibonacci"
+        ""
     ],
     "java.debug.settings.onBuildFailureProceed": true,
     "java.configuration.updateBuildConfiguration": "interactive"

@@ -1,7 +1,6 @@
 package local.connections;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import io.github.cdimascio.dotenv.Dotenv;
@@ -32,7 +31,6 @@ public class EntityManagerProvider {
     public static EntityManager getEntityManager() {
         return entityManagerFactory.createEntityManager();
     }
-
 
     public static void main(String[] args) {
         getEntityManager();
